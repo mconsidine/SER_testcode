@@ -37,12 +37,6 @@ SER_hdr_dt = np.dtype([
     ('DateTimeUTC', '<u8')
 ])
 
-SER_settings_dt = np.dtype([
-    ('Display Gamma', 'uint8'),
-    ('Exposure', 'float'),
-    ('TimeStamp', 'uint64')
-])
-
 #------- start of optional reading of settings file
 SER_settingsdata = []
 SER_log_filename = "./TestZWO.CameraSettings.txt"
@@ -176,9 +170,9 @@ if flag_rotate:
     disc = np.rot90(disc)
     
 ##show reconstructed disk
-##plt.title("reconstructed disk")
-##plt.imshow(disc, cmap='gray')
-##plt.show()
+plt.title("reconstructed disk")
+plt.imshow(disc, cmap='gray')
+plt.show()
 
 ##check last frame if needed
 #plt.imshow(myresult, cmap='hot')
